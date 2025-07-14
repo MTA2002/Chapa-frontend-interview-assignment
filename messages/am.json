@@ -1,0 +1,197 @@
+{
+  "common": {
+    "welcome": "እንኳን ደህና መጡ",
+    "login": "ግባ",
+    "signup": "ተመዝገቢ",
+    "dashboard": "ዳሽቦርድ",
+    "language": "ቋንቋ",
+    "loading": "በመጫን ላይ..."
+  },
+  "navigation": {
+    "home": "ዋና ገጽ",
+    "features": "ባህሪያት",
+    "contact": "አድራሻ"
+  },
+  "hero": {
+    "badge": "የክፍያ አገልግሎት ሰጪ",
+    "title": "የክፍያ ልምዶን ቀይር",
+    "subtitle": "በኢትዮጵያ ውስጥ ላሉ ንግዶች ደህንነቱ የተጠበቀ፣ ፈጣን እና አስተማማኝ የክፍያ ሂደት። ቻፓ PSPን የሚያምኑ በሺዎች የሚቆጠሩ ነጋዴዎች ተቀላቀሉ።",
+    "dashboard_preview": "የዳሽቦርድ ቅይታ",
+    "dashboard_description": "ለሁሉም የተጠቃሚ ሚናዎች የተቀጠረውን ዳሽቦርዳችንን ይለማመዱ"
+  },
+  "roles": {
+    "user": "ተጠቃሚ",
+    "admin": "አስተዳዳሪ",
+    "super_admin": "ዋና አስተዳዳሪ"
+  },
+  "features": {
+    "badge": "ባህሪያት",
+    "title": "ለእያንዳንዱ ሚና አጠቃላይ የክፍያ መፍትሄዎች",
+    "subtitle": "ከመሠረታዊ የክፍያ ሂደት እስከ የላቀ የስርዓት አስተዳደር፣ መድረካችን በሚና ላይ በተመሠረተ ተግባር ለፍላጎቶቻችሁ ይስማማል።",
+    "payment_processing": {
+      "title": "ደህንነቱ የተጠበቀ የክፍያ ሂደት",
+      "description": "ከመጀመሪያ እስከ መጨረሻ ምስጢራዊነት እና ማጭበርበር መከላከያ በመጠቀም ክፍያዎችን በደህንነት ያስኬዱ።"
+    },
+    "transaction_history": {
+      "title": "የግብይት ትንተና",
+      "description": "ዝርዝር ሪፖርቶች እና ግንዛቤዎች በመጠቀም የክፍያ ታሪኮን ይከታተሉ እና ይተንትኑ።"
+    },
+    "mobile_payments": {
+      "title": "የሞባይል ክፍያ መፍትሄዎች",
+      "description": "ከሞባይል ገንዘብ አገልግሎቶች እና ዲጂታል ኪሶች ክፍያዎችን ያለችግር ይቀበሉ።"
+    },
+    "user_management": {
+      "title": "የተጠቃሚ አስተዳደር",
+      "description": "በድርጅትዎ ውስጥ የተጠቃሚ መለያዎችን፣ ፈቃዶችን እና የመዳረሻ ደረጃዎችን ያስተዳድሩ።"
+    },
+    "analytics_reports": {
+      "title": "የላቀ ትንተና",
+      "description": "አጠቃላይ ሪፖርቶችን ያዘጋጁ እና ስለ የክፍያ አዝማሚያዎች ግንዛቤ ያግኙ።"
+    },
+    "security_monitoring": {
+      "title": "የደህንነት ክትትል",
+      "description": "የስርዓት ደህንነትን ይከታተሉ፣ ያልተለመዱ ነገሮችን ይለዩ እና የማጭበርበር እንቅስቃሴዎችን ይከላከሉ።"
+    },
+    "system_configuration": {
+      "title": "የስርዓት ማዋቀር",
+      "description": "የመድረክ ቅንብሮችን፣ የክፍያ ዘዴዎችን እና የአንድነት መለኪያዎችን ያዋቅሩ።"
+    },
+    "database_management": {
+      "title": "የዳታቤዝ አስተዳደር",
+      "description": "ለከፍተኛ አፈጻጸም የስርዓት ዳታ፣ ምትኬዎች እና የዳታቤዝ ማሻሻያ ያስተዳድሩ።"
+    },
+    "global_settings": {
+      "title": "ዓለም አቀፍ መድረክ ቅንብሮች",
+      "description": "በመድረክ ዙሪያ ያሉ ማዋቀሮችን፣ ፖሊሲዎችን እና አስተዳደራዊ ተግባራትን ይቆጣጠሩ።"
+    }
+  },
+  "contact": {
+    "badge": "አድራሻ",
+    "title": "ከቻፓ PSP ጋር ያገናኙ",
+    "subtitle": "ስለ የክፍያ መፍትሄዎቻችን ጥያቄዎች አሉዎት? ቡድናችን እርስዎ እንዲሳኩ ለመርዳት እዚህ አለ።",
+    "form": {
+      "name_placeholder": "ሙሉ ስም",
+      "email_placeholder": "የኢሜይል አድራሻ",
+      "subject_placeholder": "ርዕስ",
+      "message_placeholder": "ስለ የክፍያ ሂደት ፍላጎቶችዎ ይንገሩን...",
+      "submit_button": "መልዕክት ይላኩ"
+    },
+    "info": {
+      "email": {
+        "title": "የኢሜይል ድጋፍ",
+        "description": "ስለ የክፍያ መፍትሄዎችዎ ባለሙያ እርዳታ ያግኙ"
+      },
+      "phone": {
+        "title": "የስልክ ድጋፍ",
+        "description": "ከድጋፍ ቡድናችን ጋር በቀጥታ ይነጋገሩ"
+      },
+      "office": {
+        "title": "የቢሮ አድራሻ",
+        "description": "በአዲስ አበባ ያለውን ዋና ቢሮአችንን ይጎብኙ"
+      }
+    }
+  },
+  "footer": {
+    "description": "በደህንነቱ የተጠበቁ እና ቀልጣፋ የክፍያ መፍትሄዎች ንግዶችን በማብቃት የኢትዮጵያ ዋና የክፍያ አገልግሎት ሰጪ።",
+    "navigation": {
+      "title": "ፈጣን አገናኞች"
+    },
+    "services": {
+      "title": "አገልግሎቶቻችን",
+      "payment_processing": "የክፍያ ሂደት",
+      "transaction_management": "የግብይት አስተዳደር",
+      "analytics": "ትንተና እና ሪፖርት",
+      "security": "ደህንነት እና ተገዢነት"
+    },
+    "connect": {
+      "title": "ከኛ ጋር ይገናኙ"
+    },
+    "copyright": "ቻፓ PSP። ሁሉም መብቶች የተጠበቁ ናቸው።"
+  },
+  "dashboard": {
+    "title": "ዳሽቦርድ",
+    "welcome": "እንኳን ደህና መጡ, {name}!",
+    "welcomeMessage": "ክፍያዎችዎን ያስተዳድሩ እና የግብይት ታሪክዎን ይመልከቱ።",
+    "adminWelcome": "አስተዳዳሪ ዳሽቦርድ",
+    "adminMessage": "ተጠቃሚዎችን ያስተዳድሩ እና የክፍያ እንቅስቃሴዎችን ይከታተሉ።",
+    "superAdminWelcome": "ዋና አስተዳዳሪ ዳሽቦርድ",
+    "superAdminMessage": "ሙሉ የስርዓት ቁጥጥር እና አስተዳደራዊ ክትትል።",
+    "walletBalance": "ዋሌት ቀሪ ሂሳብ",
+    "availableBalance": "ያለ ቀሪ ሂሳብ",
+    "quickStats": "ፈጣን ስታቲስቲክስ",
+    "totalTransactions": "ጠቅላላ ግብይቶች፦",
+    "completedTransactions": "የተጠናቀቁ፦",
+    "pendingTransactions": "በመጠባበቅ ላይ፦",
+    "transactions": "ቅርብ ጊዜ ግብይቶች",
+    "newTransaction": "አዲስ ግብይት",
+    "transactionType": "አይነት",
+    "amount": "መጠን",
+    "description": "መግለጫ",
+    "processing": "በሂደት ላይ...",
+    "submitTransaction": "ግብይት አስገባ",
+    "noTransactions": "እስካሁን ምንም ግብይት የለም። የመጀመሪያ ግብይትዎን ከላይ ይፍጠሩ!",
+    "loadingTransactions": "ግብይቶች በመጫን ላይ...",
+    "transactionSuccess": "ግብይት በተሳካ ሁኔታ ተጠናቋል!",
+    "transactionPending": "ግብይት ተልኳል እና በመጠባበቅ ላይ ነው",
+    "transactionFailed": "ግብይት አልተሳካም",
+    "users": "ተጠቃሚዎች",
+    "userManagement": "የተጠቃሚ አስተዳደር",
+    "totalUsers": "ጠቅላላ ተጠቃሚዎች",
+    "activeUsers": "ንቁ ተጠቃሚዎች",
+    "inactiveUsers": "ያልተንቀሳቀሱ ተጠቃሚዎች",
+    "registeredMerchants": "የተመዘገቡ ነጋዴዎች",
+    "currentlyActive": "በአሁኑ ጊዜ ንቁ",
+    "deactivatedAccounts": "የተዘጉ መለያዎች",
+    "allTransactions": "ሁሉም ግብይቶች",
+    "activate": "አንቃ",
+    "deactivate": "አጥፋ",
+    "updating": "በማሻሻል ላይ...",
+    "userActivated": "ተጠቃሚ በተሳካ ሁኔታ ተነቃ",
+    "userDeactivated": "ተጠቃሚ በተሳካ ሁኔታ ተዘጋ",
+    "updateUserFailed": "ተጠቃሚ ማሻሻል አልተሳካም",
+    "noUsersFound": "ምንም ተጠቃሚዎች አልተገኙም።",
+    "loadingUsers": "ተጠቃሚዎች በመጫን ላይ...",
+    "joined": "የተቀላቀለበት፦",
+    "paymentsSummary": "ክፍያዎች ማጠቃለያ",
+    "platformOverview": "የመድረክ አጠቃላይ እይታ",
+    "totalMerchants": "ጠቅላላ ነጋዴዎች",
+    "activeRate": "ንቅነት መጠን",
+    "userActivityRate": "የተጠቃሚ እንቅስቃሴ መጠን",
+    "totalPayments": "ጠቅላላ ክፍያዎች",
+    "systemWideVolume": "በስርዓት ዙሪያ መጠን",
+    "activeUserPercentage": "ንቁ ተጠቃሚዎች መቶኛ",
+    "adminManagement": "አስተዳዳሪ አስተዳደር",
+    "addNewAdmin": "አዲስ አስተዳዳሪ ጨምር",
+    "firstName": "የመጀመሪያ ስም",
+    "lastName": "የአባት ስም",
+    "email": "ኢሜይል",
+    "addAdmin": "አስተዳዳሪ ጨምር",
+    "addingAdmin": "አስተዳዳሪ በመጨመር ላይ...",
+    "removeAdmin": "አስተዳዳሪ አስወግድ",
+    "areYouSure": "ይህንን አስተዳዳሪ መወገድ እርግጠኛ ነዎት?",
+    "adminAddedSuccess": "አስተዳዳሪ በተሳካ ሁኔታ ተጨመረ!",
+    "adminRemovedSuccess": "አስተዳዳሪ በተሳካ ሁኔታ ተወገደ!",
+    "addAdminFailed": "አስተዳዳሪ መጨመር አልተሳካም",
+    "removeAdminFailed": "አስተዳዳሪ ማስወገድ አልተሳካም",
+    "systemStats": "ስርዓት ስታቲስቲክስ",
+    "adminTeam": "አስተዳዳሪ ቡድን",
+    "includingSuperAdmin": "ዋና አስተዳዳሪን ጨምሮ",
+    "allRegisteredUsers": "ሁሉም የተመዘገቡ ተጠቃሚዎች",
+    "allRolesCombined": "ሁሉም ሚናዎች በጥምረት",
+    "allPlatformTransactions": "ሁሉም የመድረክ ግብይቶች",
+    "totalPlatformUsers": "ጠቅላላ የመድረክ ተጠቃሚዎች",
+    "logout": "ውጣ",
+    "errorInvalidEmail": "ልክ ያልሆነ ኢሜይል",
+    "errorPasswordMismatch": "የይለፍ ቃሎች አይዛመዱም",
+    "transactionTypes": {
+      "deposit": "ተቀማጭ",
+      "withdrawal": "መውጫ",
+      "payment": "ክፍያ"
+    },
+    "transactionStatuses": {
+      "completed": "ተጠናቋል",
+      "pending": "በመጠባበቅ ላይ",
+      "failed": "አልተሳካም"
+    }
+  }
+}

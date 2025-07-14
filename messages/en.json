@@ -1,0 +1,197 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard",
+    "language": "Language",
+    "loading": "Loading..."
+  },
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Payment Service Provider",
+    "title": "Transform Your Payment Experience",
+    "subtitle": "Secure, fast, and reliable payment processing for businesses across Ethiopia. Join thousands of merchants who trust Chapa PSP for their payment needs.",
+    "dashboard_preview": "Dashboard Preview",
+    "dashboard_description": "Experience our intuitive dashboard designed for all user roles"
+  },
+  "roles": {
+    "user": "User",
+    "admin": "Admin",
+    "super_admin": "Super Admin"
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Comprehensive Payment Solutions for Every Role",
+    "subtitle": "From basic payment processing to advanced system management, our platform adapts to your needs with role-based functionality.",
+    "payment_processing": {
+      "title": "Secure Payment Processing",
+      "description": "Process payments safely with end-to-end encryption and fraud detection."
+    },
+    "transaction_history": {
+      "title": "Transaction Analytics",
+      "description": "Track and analyze your payment history with detailed reports and insights."
+    },
+    "mobile_payments": {
+      "title": "Mobile Payment Solutions",
+      "description": "Accept payments from mobile money services and digital wallets seamlessly."
+    },
+    "user_management": {
+      "title": "User Management",
+      "description": "Manage user accounts, permissions, and access levels across your organization."
+    },
+    "analytics_reports": {
+      "title": "Advanced Analytics",
+      "description": "Generate comprehensive reports and gain insights into payment trends."
+    },
+    "security_monitoring": {
+      "title": "Security Monitoring",
+      "description": "Monitor system security, detect anomalies, and prevent fraudulent activities."
+    },
+    "system_configuration": {
+      "title": "System Configuration",
+      "description": "Configure platform settings, payment methods, and integration parameters."
+    },
+    "database_management": {
+      "title": "Database Management",
+      "description": "Manage system data, backups, and database optimization for peak performance."
+    },
+    "global_settings": {
+      "title": "Global Platform Settings",
+      "description": "Control platform-wide configurations, policies, and administrative functions."
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get in Touch with Chapa PSP",
+    "subtitle": "Have questions about our payment solutions? Our team is here to help you succeed.",
+    "form": {
+      "name_placeholder": "Your Full Name",
+      "email_placeholder": "Your Email Address",
+      "subject_placeholder": "Subject",
+      "message_placeholder": "Tell us about your payment processing needs...",
+      "submit_button": "Send Message"
+    },
+    "info": {
+      "email": {
+        "title": "Email Support",
+        "description": "Get expert help with your payment solutions"
+      },
+      "phone": {
+        "title": "Phone Support",
+        "description": "Speak directly with our support team"
+      },
+      "office": {
+        "title": "Office Location",
+        "description": "Visit our headquarters in Addis Ababa"
+      }
+    }
+  },
+  "footer": {
+    "description": "Ethiopia's leading payment service provider, empowering businesses with secure and efficient payment solutions.",
+    "navigation": {
+      "title": "Quick Links"
+    },
+    "services": {
+      "title": "Our Services",
+      "payment_processing": "Payment Processing",
+      "transaction_management": "Transaction Management",
+      "analytics": "Analytics & Reporting",
+      "security": "Security & Compliance"
+    },
+    "connect": {
+      "title": "Connect With Us"
+    },
+    "copyright": "Chapa PSP. All rights reserved."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}!",
+    "welcomeMessage": "Manage your payments and view your transaction history.",
+    "adminWelcome": "Admin Dashboard",
+    "adminMessage": "Manage users and monitor payment activities.",
+    "superAdminWelcome": "Super Admin Dashboard",
+    "superAdminMessage": "Complete system control and administrative oversight.",
+    "walletBalance": "Wallet Balance",
+    "availableBalance": "Available balance",
+    "quickStats": "Quick Stats",
+    "totalTransactions": "Total Transactions:",
+    "completedTransactions": "Completed:",
+    "pendingTransactions": "Pending:",
+    "transactions": "Recent Transactions",
+    "newTransaction": "New Transaction",
+    "transactionType": "Type",
+    "amount": "Amount",
+    "description": "Description",
+    "processing": "Processing...",
+    "submitTransaction": "Submit Transaction",
+    "noTransactions": "No transactions yet. Create your first transaction above!",
+    "loadingTransactions": "Loading transactions...",
+    "transactionSuccess": "Transaction completed successfully!",
+    "transactionPending": "Transaction submitted and is pending",
+    "transactionFailed": "Transaction failed",
+    "users": "Users",
+    "userManagement": "User Management",
+    "totalUsers": "Total Users",
+    "activeUsers": "Active Users",
+    "inactiveUsers": "Inactive Users",
+    "registeredMerchants": "Registered merchants",
+    "currentlyActive": "Currently active",
+    "deactivatedAccounts": "Deactivated accounts",
+    "allTransactions": "All transactions",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "updating": "Updating...",
+    "userActivated": "User activated successfully",
+    "userDeactivated": "User deactivated successfully",
+    "updateUserFailed": "Failed to update user",
+    "noUsersFound": "No users found.",
+    "loadingUsers": "Loading users...",
+    "joined": "Joined:",
+    "paymentsSummary": "Payment Summaries",
+    "platformOverview": "Platform Overview",
+    "totalMerchants": "Total Merchants",
+    "activeRate": "Active Rate",
+    "userActivityRate": "User Activity Rate",
+    "totalPayments": "Total Payments",
+    "systemWideVolume": "System-wide volume",
+    "activeUserPercentage": "Active user percentage",
+    "adminManagement": "Admin Management",
+    "addNewAdmin": "Add New Admin",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "addAdmin": "Add Admin",
+    "addingAdmin": "Adding Admin...",
+    "removeAdmin": "Remove Admin",
+    "areYouSure": "Are you sure you want to remove this admin?",
+    "adminAddedSuccess": "Admin added successfully!",
+    "adminRemovedSuccess": "Admin removed successfully!",
+    "addAdminFailed": "Failed to add admin",
+    "removeAdminFailed": "Failed to remove admin",
+    "systemStats": "System Stats",
+    "adminTeam": "Admin Team",
+    "includingSuperAdmin": "Including super admin",
+    "allRegisteredUsers": "All registered users",
+    "allRolesCombined": "All roles combined",
+    "allPlatformTransactions": "All platform transactions",
+    "totalPlatformUsers": "Total Platform Users",
+    "logout": "Logout",
+    "errorInvalidEmail": "Invalid email",
+    "errorPasswordMismatch": "Passwords do not match",
+    "transactionTypes": {
+      "deposit": "Deposit",
+      "withdrawal": "Withdrawal",
+      "payment": "Payment"
+    },
+    "transactionStatuses": {
+      "completed": "Completed",
+      "pending": "Pending",
+      "failed": "Failed"
+    }
+  }
+}
