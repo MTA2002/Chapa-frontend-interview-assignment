@@ -1,7 +1,6 @@
 import { http, HttpResponse } from "msw";
 import { dataManager } from "../data/dataManager";
-import { mockTransactions } from "../data";
-import { User, UserPaymentSummary, AdminRequest, ApiResponse } from "@/types";
+import { User, UserPaymentSummary, AdminRequest } from "@/types";
 
 export const userHandlers = [
   // Get all users (for admin/super admin)
@@ -104,6 +103,8 @@ export const userHandlers = [
       email: adminData.email,
       firstName: adminData.firstName,
       lastName: adminData.lastName,
+      phone: `+251 911 ${Math.floor(Math.random() * 900000 + 100000)}`,
+      city: "Addis Ababa",
       role: "admin",
       status: "active",
       createdAt: new Date().toISOString(),

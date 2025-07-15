@@ -1,6 +1,5 @@
 import { http, HttpResponse } from "msw";
 import { dataManager } from "../data/dataManager";
-import { Wallet, ApiResponse } from "@/types";
 
 export const walletHandlers = [
   // Get wallet balance by user ID

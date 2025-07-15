@@ -128,8 +128,8 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-sm text-gray-400">
-            <p>support@chapa-psp.com</p>
-            <p>+251 11 000 0000</p>
+            <p>mahfouzteyib57@gmail.com</p>
+            <p>+251 929146352</p>
           </div>
         </div>
       </div>

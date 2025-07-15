@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import {
   Form,
@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useAuthStore } from "@/stores/authStore";
 import toast from "react-hot-toast";
@@ -33,11 +33,17 @@ export default function Login() {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations();
-
+  const { isAuthenticated } = useAuthStore();
   // Zustand auth store
   const { login, isLoading } = useAuthStore();
 
   const currentLocale = pathname.startsWith("/en") ? "en" : "am";
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push(`/${currentLocale}/dashboard`);
+    }
+  }, [isAuthenticated, router, currentLocale]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

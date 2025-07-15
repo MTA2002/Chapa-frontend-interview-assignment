@@ -138,6 +138,14 @@ class DataManager {
     localStorage.setItem(STORAGE_KEYS.WALLETS, JSON.stringify(wallets));
   }
 
+  addWallet(wallet: Wallet): void {
+    const wallets = this.getWallets();
+    wallets.push(wallet);
+    this.setWallets(wallets);
+
+    console.log(`💳 Wallet added for user ${wallet.userId}`);
+  }
+
   updateWallet(userId: string, updates: Partial<Wallet>): Wallet | null {
     const wallets = this.getWallets();
     const walletIndex = wallets.findIndex((w) => w.userId === userId);

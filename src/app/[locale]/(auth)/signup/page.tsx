@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useTranslations } from "next-intl";
@@ -19,10 +19,28 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useAuthStore } from "@/stores/authStore";
 
 const formSchema = z
   .object({
+    firstName: z
+      .string()
+      .min(2, { message: "First name must be at least 2 characters." })
+      .max(50, { message: "First name must be at most 50 characters." }),
+    lastName: z
+      .string()
+      .min(2, { message: "Last name must be at least 2 characters." })
+      .max(50, { message: "Last name must be at most 50 characters." }),
     email: z.string().email({ message: "Enter a valid email address." }),
+    phone: z
+      .string()
+      .min(10, { message: "Phone number must be at least 10 digits." })
+      .max(15, { message: "Phone number must be at most 15 digits." })
+      .regex(/^[+]?[\d\s-()]+$/, { message: "Enter a valid phone number." }),
+    city: z
+      .string()
+      .min(2, { message: "City must be at least 2 characters." })
+      .max(50, { message: "City must be at most 50 characters." }),
     password: z
       .string()
       .min(8, { message: "Password must be at least 8 characters." })
@@ -45,13 +63,24 @@ export default function Signup() {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations();
+  const { isAuthenticated } = useAuthStore();
 
   const currentLocale = pathname.startsWith("/en") ? "en" : "am";
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push(`/${currentLocale}/dashboard`);
+    }
+  }, [isAuthenticated, router, currentLocale]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      firstName: "",
+      lastName: "",
       email: "",
+      phone: "",
+      city: "",
       password: "",
       confirmPassword: "",
     },
@@ -60,14 +89,18 @@ export default function Signup() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      // Call MSW signup API
+      // Call MSW signup API with user data
       const response = await fetch("/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          firstName: values.firstName,
+          lastName: values.lastName,
           email: values.email,
+          phone: values.phone,
+          city: values.city,
           password: values.password,
         }),
       });
@@ -125,16 +158,54 @@ export default function Signup() {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>First Name *</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="John"
+                        {...field}
+                        disabled={isLoading}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Last Name *</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Doe"
+                        {...field}
+                        disabled={isLoading}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                  <FormLabel>Email Address *</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
-                      placeholder="your.email@example.com"
+                      placeholder="john.doe@example.com"
                       {...field}
                       autoComplete="email"
                       disabled={isLoading}
@@ -145,12 +216,51 @@ export default function Signup() {
               )}
             />
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone Number *</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="tel"
+                        placeholder="+251 911 123 456"
+                        {...field}
+                        disabled={isLoading}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="city"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>City *</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Addis Ababa"
+                        {...field}
+                        disabled={isLoading}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
             <FormField
               control={form.control}
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>Password *</FormLabel>
                   <div className="relative">
                     <FormControl>
                       <Input
@@ -180,7 +290,7 @@ export default function Signup() {
               name="confirmPassword"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Confirm Password</FormLabel>
+                  <FormLabel>Confirm Password *</FormLabel>
                   <div className="relative">
                     <FormControl>
                       <Input

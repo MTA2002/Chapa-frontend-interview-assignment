@@ -80,7 +80,7 @@ const Contact = () => {
           <p className="text-gray-600 text-sm">
             {t("contact.info.email.description")}
           </p>
-          <p className="text-cyan-600 font-medium">support@chapa-psp.com</p>
+          <p className="text-cyan-600 font-medium">mahfouzteyib57@gmail.com</p>
         </div>
 
         <div className="text-center">
@@ -105,7 +105,7 @@ const Contact = () => {
           <p className="text-gray-600 text-sm">
             {t("contact.info.phone.description")}
           </p>
-          <p className="text-cyan-600 font-medium">+251 11 000 0000</p>
+          <p className="text-cyan-600 font-medium">+251 929146352</p>
         </div>
 
         <div className="text-center">

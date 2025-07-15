@@ -6,6 +6,8 @@ export interface User {
   email: string;
   firstName: string;
   lastName: string;
+  phone?: string;
+  city?: string;
   role: UserRole;
   status: UserStatus;
   createdAt: string;

@@ -1,6 +1,6 @@
 import { http, HttpResponse } from "msw";
 import { dataManager } from "../data/dataManager";
-import { LoginRequest, AuthUser, ApiResponse, PublicUser } from "@/types";
+import { LoginRequest, AuthUser, PublicUser } from "@/types";
 
 export const authHandlers = [
   // Login endpoint
@@ -37,6 +37,7 @@ export const authHandlers = [
     }
 
     // Remove password from user data before sending to client
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password, ...userWithoutPassword } = user;
 
     // Mock successful login
@@ -66,11 +67,11 @@ export const authHandlers = [
   // User signup endpoint (for normal users only)
   http.post("/api/auth/signup", async ({ request }) => {
     const signupData = (await request.json()) as {
-      email: string;
       firstName: string;
       lastName: string;
-      businessName: string;
+      email: string;
       phone: string;
+      city: string;
       password: string;
     };
 
@@ -93,20 +94,34 @@ export const authHandlers = [
       );
     }
 
-    // Create new user (in real app, this would be saved to database)
+    // Create new user with all provided information
     const newUser = {
       id: `user_${Date.now()}`,
       email: signupData.email,
-      firstName: "New",
-      lastName: "User",
+      firstName: signupData.firstName,
+      lastName: signupData.lastName,
+      phone: signupData.phone,
+      city: signupData.city,
       role: "user" as const,
       status: "active" as const,
       createdAt: new Date().toISOString(),
       password: signupData.password,
     };
 
-    // Add to persistent storage
+    // Add user to persistent storage
     dataManager.addUser(newUser);
+
+    // Automatically create a wallet for the new user
+    const newWallet = {
+      userId: newUser.id,
+      balance: 0, // Start with zero balance
+      currency: "ETB" as const,
+    };
+
+    // Add wallet to persistent storage
+    dataManager.addWallet(newWallet);
+
+    console.log(`✅ New user created: ${newUser.email} with wallet`);
 
     return HttpResponse.json({
       success: true,
